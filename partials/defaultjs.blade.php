@@ -1,0 +1,1 @@
+	<script data-main="{{url(dirTemaToko().'snapshop/assets/js/app-main')}}" src="{{url('js/require.js')}}"></script>
