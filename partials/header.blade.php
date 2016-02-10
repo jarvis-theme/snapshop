@@ -11,7 +11,7 @@
                 @endif
             </ul>
         </div>
-        @if(@getimagesize( url(logo_image_url()) ))
+        @if( logo_image_url() )
         <h1 class="logo">
             <a href="{{url('home')}}">
                 {{HTML::image(logo_image_url(),'Logo',array("class"=>"gbr-logo"))}}
@@ -28,9 +28,25 @@
         <div class="responsive-nav mobile-navigation">
             <select onchange="if(this.options[this.selectedIndex].value != ''){window.top.location.href=this.options[this.selectedIndex].value}">
                 <option selected="" value="">Menu...</option>
-                @if(count(list_category()) > 0)
-                    @foreach(list_category() as $link)
-                    <option value="{{category_url($link)}}"> {{$link->nama}}</option>
+                @if(count(category_menu()) > 0)
+                    @foreach(category_menu() as $link)
+                        @if($link->parent == 0)
+                        <option value="{{category_url($link)}}"> {{$link->nama}}</option>
+                            @if(count($link->anak) > 0)
+                            @foreach($link->anak as $submenu)
+                                @if($submenu->parent == $link->id)
+                                <option value="{{category_url($submenu)}}" id="submenu"> {{$submenu->nama}}</option>
+                                    @if(count($submenu->anak) > 0)
+                                    @foreach($submenu->anak as $submenu2)
+                                        @if($submenu->id == $submenu2->parent)        
+                                        <option value="{{category_url($submenu2)}}" id="submenu2"> {{$submenu2->nama}}</option>
+                                        @endif
+                                    @endforeach
+                                    @endif
+                                @endif
+                            @endforeach
+                            @endif
+                        @endif
                     @endforeach
                 @endif
             </select>
@@ -54,13 +70,13 @@
                 <a href="{{category_url($menu)}}">{{$menu->nama}}</a>
                     @if(count($menu->anak) >= 1)
                     <ul class="sub_menu">
-                        @foreach(list_category() as $key1=>$submenu)
+                        @foreach($menu->anak as $key1=>$submenu)
                             @if($submenu->parent == $menu->id)
                             <li>
                                 <a href="{{ category_url($submenu) }}">{{ $submenu->nama }}</a>
                                 @if(count($submenu->anak) >= 1)
                                     <ul>
-                                    @foreach(list_category() as $key2=>$submenu2)
+                                    @foreach($submenu->anak as $key2=>$submenu2)
                                         @if($submenu->id == $submenu2->parent)        
                                         <li><a href="{{ category_url($submenu2) }}">{{ $submenu2->nama }}</a></li>
                                         @endif

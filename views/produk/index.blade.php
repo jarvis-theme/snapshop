@@ -39,12 +39,15 @@
                     @endforeach
                 </ul>
                 @endif
+                @if(list_koleksi()->count() > 0)
                 <ul class="category collection">
                     <li class="header">Koleksi</li>
                     @foreach(list_koleksi() as $mykoleksi)
                     <li><a href="{{koleksi_url($mykoleksi)}}">{{$mykoleksi->nama}}</a></li>
                     @endforeach
                 </ul>
+                @endif
+                <ul>{{pluginSidePowerup()}}</ul>
             </div>
         </div>
 

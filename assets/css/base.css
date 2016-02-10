@@ -1,11 +1,3 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*
-Theme Name: Leisure Magento Theme
-Author: RohithPaul
-Version: 1.0.0
-*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 body{
 	font-family:Arial, Helvetica, sans-serif; color:#544f4b;
 }
@@ -199,7 +191,7 @@ footer .footer_customblock>div{padding:10px;color: #423e3b}
 footer .footer_customblock .shipping_info{ line-height:22px; font-size:14px; color:#000;  border-bottom:solid 1px #d6d6d6; background:url(../images/shipping.png) no-repeat right center;}
 footer .footer_customblock .shipping_info big{ text-transform:uppercase; font-size:16px; font-weight:bold;}
 footer .footer_customblock .contact_info big{font-size:16px; font-weight:bold; color:#423e3;}
-address{ display:inline-block; width:100%; font-size:11px; color:#fff; padding:25px 0px; line-height:25px; background-color: #4187c3}
+address{ display:inline-block; width:100%; font-size:11px; color:#fff; padding:25px 0px 0 10px; line-height:25px; background-color: #4187c3}
 address a{ color: #fff}
 
 /*-----------------------------------MAIN CONTENT*/
@@ -455,13 +447,7 @@ a.icon-pinterest:hover {
 #brandshop { padding: 25px 0px 20px 0px;color: #3D3B3B;text-decoration: none;text-transform: uppercase;font-weight: light;font-size: 32px; }
 .mobile-navigation { display:none; margin: 0 auto; position: static; }
 .responsive-nav{display: hidden;}
-@media screen and (max-width: 600px) {
-	.responsive-nav{display: inline-block;}
-}
-@media (min-width: 601px) {
-	.step-title { width: 96.3% !important; }
-	#checkout-step-login { width: 90%; }
-}
+
 .label {
   display: inline;
   padding: .25em .6em;
@@ -528,6 +514,34 @@ a.icon-pinterest:hover {
 .table-responsive {
   min-height: .01%; overflow-x: auto
 }
+
+.form-login { width: 50%; float: right;}
+#checkout-step-login > .col2-set > .col-1 > .buttons-set { margin: 20px 0; }
+
+.gbr-slide{max-height: 435px;}
+.checkout_steps{width: 100%}
+
+.centering{text-align: center}
+.mail{text-decoration: none; color:#423e3b}.menu-footer{padding:10px 20px}footer address a, address a{text-decoration: none;}
+.gbr-logo{max-height: 100px}.logo-text{text-decoration:none}.side-nav{display: list-item;list-style: none}
+#title-blog{padding-bottom: 11px}/*.short-code-column > p{text-align: right}*/
+.pull-left{float:left}.pull-right{float:right}#list-banks{width: 40%}#list-banks > select{width: 100%}.contact_page{width: 100%}
+.product_info{min-height: 83px}.produk_info h3{height: 28px}.home-product{text-align: center; position:relative}
+.side-info{line-height: 2}b > a{float:right;text-decoration: none}.toolbar{text-align: center}.toolbar > span {font-weight: bold}.home-item{position:relative}
+.note{height:100px}.input-box select{width: 100% !important}.nobackground{background-image: none !important}.itemselect{width: 112px}
+#detailprod{width: 500px; float: left; margin-left: 5px}#linkpages{margin-right: 42%}#opsiprod{width:52%}#relateprod{position:relative}
+#searchprod{float:left; margin-left:1%; width: 90% !important}#halsearch{padding-bottom: 11px;}#noresult{text-align: center; border: 0}
+.autowidth{width: auto !important}.rules{text-decoration: none; color:#424242}.clr{clear: both}.relateprod{position: relative}
+.opsi-item{width: 140px}#lod{margin-left: 100%; padding-left: 10px;}
+#submenu{margin-left:5px}#submenu2{margin-left:15px}
+address div.centering img{border-radius: 5px}
+@media screen and (max-width: 600px) {
+	.responsive-nav{display: inline-block;}
+}
+@media (min-width: 601px) {
+	.step-title { width: 96.3% !important; }
+	#checkout-step-login { width: 90%; }
+}
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%; margin-bottom: 15px; overflow-y: hidden; -ms-overflow-style: -ms-autohiding-scrollbar;border: 1px solid #ddd
@@ -569,23 +583,7 @@ a.icon-pinterest:hover {
     border-bottom: 0;
   }
 }
-.form-login { width: 50%; float: right;}
-#checkout-step-login > .col2-set > .col-1 > .buttons-set { margin: 20px 0; }
 @media only screen and (max-width: 600px) { 
 	.responsive-nav { top: 115px !important; }
+	.contact_page address, .contact_page .block{ width: 100% !important}
 }
-.gbr-slide{max-height: 435px;}
-.checkout_steps{width: 100%}
-
-.centering{text-align: center}
-.mail{text-decoration: none; color:#423e3b}.menu-footer{padding:10px 20px}footer address a, address a{text-decoration: none;}
-.gbr-logo{max-height: 100px}.logo-text{text-decoration:none}.side-nav{display: list-item;list-style: none}
-#title-blog{padding-bottom: 11px}/*.short-code-column > p{text-align: right}*/
-.pull-left{float:left}.pull-right{float:right}#list-banks{width: 40%}#list-banks > select{width: 100%}.contact_page{width: 100%}
-.product_info{min-height: 83px}.produk_info h3{height: 28px}.home-product{text-align: center; position:relative}
-.side-info{line-height: 2}b > a{float:right;text-decoration: none}.toolbar{text-align: center}.toolbar > span {font-weight: bold}.home-item{position:relative}
-.note{height:100px}.input-box select{width: 100% !important}.nobackground{background-image: none !important}.itemselect{width: 112px}
-#detailprod{width: 500px; float: left; margin-left: 5px}#linkpages{margin-right: 42%}#opsiprod{width:52%}#relateprod{position:relative}
-#searchprod{float:left; margin-left:1%; width: 90% !important}#halsearch{padding-bottom: 11px;}#noresult{text-align: center; border: 0}
-.autowidth{width: auto !important}.rules{text-decoration: none; color:#424242}.clr{clear: both}.relateprod{position: relative}
-.opsi-item{width: 140px}#lod{margin-left: 100%; padding-left: 10px;}
