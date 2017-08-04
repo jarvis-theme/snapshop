@@ -2,10 +2,10 @@
     <footer>
         <div class="menu-footer">
             <ul class="footer_links">
-                @foreach(all_menu() as $key=>$group)    
-                <li><span>{{$group->nama}}</span>                
+                @foreach(all_menu() as $key=>$group)
+                <li><span>{{$group->nama}}</span>
                     <ul>
-                        @foreach($group->link as $key=>$link)   
+                        @foreach($group->link as $key=>$link)
                         <li><a href="{{menu_url($link)}}">{{$link->nama}}</a></li>
                         @endforeach
                     </ul>
@@ -41,9 +41,9 @@
         </div>    
     </footer>
 </div>
-<address>
-    <p class="centering">Copyright &copy; {{date('Y')}} {{ Theme::place('title') }}. All Rights Reserved. Powered by <a target="_blank" href="http://jarvis-store.com">Jarvis Store</a></p>
-    <div class="centering">
+<address class="centering" style="padding: 25px 0;">
+    <p>Copyright &copy; {{date('Y')}} {{ Theme::place('title') }}. All Rights Reserved. Powered by <a target="_blank" href="http://jarvis-store.com">Jarvis Store</a></p>
+    <div>
         @if(list_banks()->count() > 0)
             @foreach(list_banks() as $bank) 
             <img src="{{bank_logo($bank)}}" alt="{{$bank->bankdefault->nama}}" title="{{$bank->bankdefault->nama}}" />
@@ -65,7 +65,10 @@
         @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
         <img class="img-responsive" src="{{url('img/bank/doku.jpg')}}" alt="doku myshortcart" title="Doku" />
         @endif
+        @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
+        <img class="img-responsive midtrans" src="{{url('img/bank/midtrans.png')}}" alt="midtrans" title="Midtrans">
+        @endif
     </div>
 </address>
-<div class="clear"></div>    
+<div class="clear"></div>
 {{pluginPowerup()}}

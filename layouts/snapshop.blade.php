@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {{ Theme::partial('seostuff') }}  
-        {{ Theme::partial('defaultcss') }}  
-        {{ Theme::asset()->styles() }}  
+        {{ Theme::partial('seostuff') }}
+        {{ Theme::asset()->styles() }}
+        {{ Theme::partial('defaultcss') }}
     </head>
     <body>
-        {{ Theme::partial('header') }}  
+        {{ Theme::partial('header') }}
         <div class="section_container">
             <section>
-                {{ Theme::partial('slider') }}  
+                {{ Theme::partial('slider') }}
                 <div class="container">
-                    {{ Theme::place('content') }}   
+                    {{ Theme::place('content') }}
                 </div>
-                {{ Theme::partial('subscribe') }}  
+                {{ Theme::partial('subscribe') }}
             </section>
         </div>
-        {{ Theme::partial('footer') }}  
-        {{ Theme::partial('defaultjs') }}  
-        {{ Theme::partial('analytic') }}   
+        {{ Theme::partial('footer') }}
+        {{ Theme::partial('defaultjs') }}
+        {{ Theme::partial('analytic') }}
     </body>
 </html>

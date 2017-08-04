@@ -82,12 +82,12 @@
                 <ul>
                     @foreach(list_product(Input::get('show'), @$category, @$collection) as $myproduk)
                     <li class="relateprod">
-                        @if(is_outstok($myproduk))    
-                            {{is_outstok($myproduk, $kiri=1)}}
-                        @elseif(is_produkbaru($myproduk))
-                            {{is_produkbaru($myproduk, $kiri=1)}}
+                        @if(is_outstok($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/stok-badge.png" class="outstok-badge">
                         @elseif(is_terlaris($myproduk))
-                            {{is_terlaris($myproduk, $kiri=1)}}
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/terlaris-badge.png" class="best-badge">
+                        @elseif(is_produkbaru($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/new-badge.png" class="new-badge">
                         @endif
                         <a href="{{product_url($myproduk)}}" class="product_image">
                             {{HTML::image(product_image_url($myproduk->gambar1, 'medium'), $myproduk->nama)}}
@@ -108,12 +108,12 @@
                 <ul>
                     @foreach(list_product(Input::get('show'), @$category, @$collection) as $myproduk)
                     <li class="relateprod">
-                        @if(is_outstok($myproduk))    
-                            {{is_outstok($myproduk, $kiri=1)}}
-                        @elseif(is_produkbaru($myproduk))
-                            {{is_produkbaru($myproduk, $kiri=1)}}
+                        @if(is_outstok($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/stok-badge.png" class="outstok-badge">
                         @elseif(is_terlaris($myproduk))
-                            {{is_terlaris($myproduk, $kiri=1)}}
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/terlaris-badge.png" class="best-badge">
+                        @elseif(is_produkbaru($myproduk))
+                        <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/new-badge.png" class="new-badge">
                         @endif
                         <a href="{{product_url($myproduk)}}" class="product_image">
                             {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama)}}

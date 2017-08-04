@@ -51,12 +51,14 @@
                 @endif
             </select>
         </div>
-        <form action="{{url('search')}}" class="header_search" method="post">
-            <div class="form-search">
-                <input id="search" type="text" name="search" class="input-text" autocomplete="off" placeholder="Search" required>
-                <button type="submit" title="Search"></button>
-            </div>
-        </form>
+        <div class="w100">
+            <form action="{{url('search')}}" class="header_search" method="post">
+                <div class="form-search">
+                    <input id="search" type="text" name="search" class="input-text" autocomplete="off" placeholder="Search" required>
+                    <button type="submit" title="Search"></button>
+                </div>
+            </form>
+        </div>
     </header>
 </div>
 <div class="navigation_container">

@@ -1,12 +1,12 @@
 	<div class="full_page">
 		<h1>{{$nama}}</h1>
 		<div class="page_sidebar">
-			<section id="main_content">
+			<section id="main_content" class="testi">
 				@foreach(list_testimonial() as $key=>$value)
-				<a href="#"><span id="halsearch" class="highlight_text">{{$value->nama}}</span></a>
-				<p><i class="date">{{waktuTgl($value->created_at)}}</i></p>
-				<div class="short-code-column">
-					&#187; {{($value->isi)}}
+				<div class="mb30">
+					<h5><span id="halsearch" class="highlight_text">{{$value->nama}}</span></h5>
+					<div class="short-code-column">&#187; {{trim($value->isi)}}</div>
+					<br>
 					<div id="borders"></div>
 				</div>
 				@endforeach
@@ -17,10 +17,15 @@
 					<li><b>Buat Testimonial</b></li>
 				</ul>
 				<form action="{{url('testimoni')}}" method="post">
-					<label>Nama</label><br><input id="testimoni" type="text" name="nama" class="input-text" required><br><br>
-					<label>Testimonial</label><br><textarea id="testimoni" name="testimonial" class="textarea" required></textarea><br><br>
+					<div class="form-group">
+						<label class="labels">Nama</label>
+						<input id="testimoni" type="text" name="nama" class="input-text" required>
+					</div>
+					<div class="form-group">
+						<label class="labels">Testimonial</label>
+						<textarea id="testimoni" name="testimonial" class="textarea" required></textarea>
+					</div>
 					<input type="submit" class="subbutton brown_btn pull-right" value="Kirim Testimonial">
-					<br><br>
 				</form>
 				<div class="twitter_feed"> </div>
 			</aside>

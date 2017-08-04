@@ -8,7 +8,7 @@
                                 <h2>Konfirmasi Order</h2>
                             </div>
                             <div id="checkout-step-login">
-                                <div class="action_buttonbar">
+                                <div class="action_buttonbar centering">
                                     <p>Silakan masukkan kode order yang mau anda cari!</p>
                                     @if($checkouttype==1)
                                     {{-- */ $konfirmasi = 'konfirmasiorder' /* --}}

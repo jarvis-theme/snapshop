@@ -1,4 +1,4 @@
-﻿<div class="subscribe_block">
+﻿<div class="subscribe_block w100">
     <div class="find_us">
         <h3>Ikuti Kami</h3>
         @if($sosial->fb)

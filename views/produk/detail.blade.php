@@ -71,8 +71,7 @@
                     </div>
                     @endif
                 </div>
-                <div class="add_to_buttons">
-                    <!-- <div class="add_cart"><input type='submit' class="add_cart" value='Add to Cart'></div> -->
+                <div class="add_to_buttons centering">
                     <button type="submit" class="add_cart" value=''>Pre-order</button>
                 </div>
             @else
@@ -100,12 +99,12 @@
                 </div>
                 @endif
             </div>
-            <div class="add_to_buttons">
+            <div class="add_to_buttons centering">
                 <button type="submit" class="add_cart" value=''>Masukan ke Keranjang</button>
             </div>
         @endif
         </form>
-        <div class="product_overview">
+        <div class="product_overview centering">
             {{sosialShare(url(product_url($produk)))}}
         </div>
         <div class="product_overview">
@@ -121,11 +120,11 @@
         @foreach(other_product($produk) as $myproduk)
         <li id="relateprod">
             @if(is_outstok($myproduk))
-            {{is_outstok($myproduk)}}
+            <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/stok-badge.png" class="outstok-badge">
             @elseif(is_terlaris($myproduk))
-            {{is_terlaris($myproduk)}}
+            <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/terlaris-badge.png" class="best-badge">
             @elseif(is_produkbaru($myproduk))
-            {{is_produkbaru($myproduk)}}
+            <img src="//d3kamn3rg2loz7.cloudfront.net/assets/snapshop/img/new-badge.png" class="new-badge">
             @endif
             <a href="{{slugProduk($myproduk)}}" class="product_image">
                 {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama)}}
@@ -136,7 +135,7 @@
             </div>
                 
             @if($setting->checkoutType!=2)
-            <div class="price_info"> <!-- <a href="#">+ Add to wishlist</a> -->
+            <div class="price_info">
                 <button onclick="window.location.href='{{slugProduk($myproduk)}}'" class="price_add" title="" type="button">
                     <span class="pr_price">&nbsp;{{price($myproduk->hargaJual,$matauang)}}</span>
                     <span class="pr_add">Lihat</span>
