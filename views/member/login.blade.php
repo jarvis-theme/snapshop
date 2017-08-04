@@ -25,7 +25,7 @@
 											<fieldset>
 												<ul class="form-list">
 													<li>
-														<label class="required" for="login-email"><em>*</em>Email</label>
+														<label class="required"><em>*</em>Email</label>
 														<div class="input-box">
 															<input type="email" name="email" id="inputEmail" placeholder="Email" required>
 														</div>

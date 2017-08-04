@@ -12,7 +12,6 @@
 							<small>{{shortDescription($myproduk->deskripsi,100)}}</small><a class="black" href="{{url(product_url($myproduk))}}">Lihat Produk</a>
 						</div>
 					</li>
-					<div id="borders"></div>
 					@endforeach
 				</ul>
 			</div>

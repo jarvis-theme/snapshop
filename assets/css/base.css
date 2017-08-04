@@ -202,7 +202,7 @@ ul.breadcrumb li{ padding:0px 14px; font-size:11px; text-transform:uppercase; di
 ul.breadcrumb li:first-child{ padding-left:0px; background:none;}
 ul.breadcrumb li.active{ background-position:-10px -53px;}
 ul.breadcrumb li a{ color:#bdbdbd; text-decoration:none;}
-#main_content .products_list ul{ margin:0px -24px;}
+#main_content .products_list ul{ margin:0px -24px; list-style: none; }
 #main_content .products_list{ border:none;}
 #main_content .products_list li{ margin:0px 24px 24px 24px;}
 /*Toolbar*/
@@ -530,7 +530,7 @@ a.icon-pinterest:hover {
 .side-info{line-height: 2}b > a{float:right;text-decoration: none}.toolbar{text-align: center}.toolbar > span {font-weight: bold}.home-item{position:relative}
 .note{height:100px}.input-box select{width: 100% !important}.nobackground{background-image: none !important}.itemselect{width: 112px}
 #detailprod{width: 500px; float: left; margin-left: 5px}#linkpages{margin-right: 42%}#opsiprod{width:52%}#relateprod{position:relative}
-#searchprod{float:left; margin-left:1%; width: 90% !important}#halsearch{padding-bottom: 11px;}#noresult{text-align: center; border: 0}
+#searchprod{float:left; margin-left:1%;}#halsearch{padding-bottom: 11px;}#noresult{text-align: center; border: 0}
 .autowidth{width: auto !important}.rules{text-decoration: none; color:#424242}.clr{clear: both}.relateprod{position: relative}
 .opsi-item{width: 140px}#lod{margin-left: 100%; padding-left: 10px;}
 #submenu{margin-left:5px}#submenu2{margin-left:15px}
@@ -586,7 +586,7 @@ section#main_content ol {
 	width: initial;
 	display: block;
 }
-.products_list ul li#relateprod { float: none; }
+.products_list ul li#relateprod { float: none; display: inline-block; }
 .register-text { padding-bottom: 4.7em; }
 .products_list .price_info button .pr_price,
 .products_list .price_info button .pr_add {
@@ -658,3 +658,4 @@ div.selector { width: 230px; }
 .contact_page > address {
 	background: none; color: #544f4b;
 }
+.products_list ul { list-style: none; }
